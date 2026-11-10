@@ -1,16 +1,20 @@
 <aside class="sidebar" id="sidebar">
 
+    {{-- BRAND --}}
     <div class="sidebar-brand">
+
         <div class="brand-icon">
             <i class="bi bi-wifi"></i>
         </div>
 
-        <div>
+        <div class="brand-info">
             <h5>ISP Manager</h5>
             <small>Customer Management</small>
         </div>
+
     </div>
 
+    {{-- MENU --}}
     <div class="sidebar-menu">
 
         <div class="menu-label">MENU UTAMA</div>
@@ -49,7 +53,9 @@
 
     </div>
 
+    {{-- FOOTER --}}
     <div class="sidebar-footer">
+
         <div class="user-avatar">
             {{ strtoupper(substr(auth()->user()->name, 0, 1)) }}
         </div>
@@ -61,10 +67,12 @@
 
         <form action="{{ route('logout') }}" method="POST">
             @csrf
+
             <button type="submit" class="btn-logout" title="Logout">
                 <i class="bi bi-box-arrow-right"></i>
             </button>
         </form>
+
     </div>
 
 </aside>
